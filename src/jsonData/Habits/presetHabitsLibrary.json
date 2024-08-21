@@ -1,0 +1,292 @@
+{
+    "libraryHabits": 
+    [
+        [
+            [
+                "Челленжи от спонсоров (с дополнительными бонусами бонусами) ➡",
+                "/competitions"
+            ],
+            {
+                "backgroundColor": "#202020",
+                "borderColor": "#F2EEE9"
+            },
+            [
+                { 
+                "id": -1,
+                "type": -1,
+                "title": "Сходить на фильм Чебурашка - от МиражСинема",
+                "titleHtml": "Сходить <a href='https://www.mozilla.com'>на фильм Чебурашка</a> - от МиражСинема",
+                "description": "Поход в кино на фильм 'Чебурашка' может стать не только традицией, но и возможностью провести время с пользой",
+                "time": 
+                {
+                    "creationTime": -1,
+                    "periodStart": -1, 
+                    "totalTime": -1,
+                    "timeEnd": -1,
+                    "type": "month",
+                    "months": 2,
+                    "weeks": 0,
+                    "days": 0,
+                    "hours": 0,
+                    "minutes": 0
+                },
+                "taskParam":
+                {
+                    "numFrom": 0,
+                    "numTo": -1,
+                    "unit": ""
+                },
+                "done": false,
+                "progress": 0,
+                "doneTime": -1,
+                "progressTimeLine": [],
+                "tagsId": ["jlkJj21jJ2", "fmDp21AdSW"],
+                "bonuses": 
+                {
+                    "xp": 200,
+                    "money": 200
+                }
+                },
+                { 
+                    "id": -1,
+                    "type": -1,
+                    "title": "Оформи бесплатную кредитную карту Тинкофф Банка - 100 дней без процентов",
+                    "titleHtml": "Оформи бесплатную <a href='https://www.tinkoff.ru/cards/credit-cards/tinkoff-platinum/?internal_source=filter_main'> кредитную карту Тинкофф Банка - 100 дней без процентов </a>",
+
+                    "description": "Ну реал лучшая!!!",
+                    "time": 
+                    {
+                        "creationTime": -1,
+                        "periodStart": -1, 
+                        "totalTime": -1,
+                        "timeEnd": -1,
+                        "type": "month",
+                        "months": 12,
+                        "weeks": 0,
+                        "days": 0,
+                        "hours": 0,
+                        "minutes": 0
+                    },
+                    "taskParam":
+                    {
+                        "numFrom": 0,
+                        "numTo": -1,
+                        "unit": ""
+                    },
+                    "done": false,
+                    "progress": 0,
+                    "doneTime": -1,
+                    "progressTimeLine": [],
+                    "tagsId": ["jlkJj21jJ2"],
+                    "bonuses": 
+                    {
+                        "xp": 100,
+                        "money": 4000
+                    }
+                }
+            ]
+        ],
+        [
+            [
+                "Привычки для здоровья",
+                ""
+            ],
+            {
+                "backgroundColor": "#2E5739",
+                "borderColor": "#71C752"
+            },
+            [
+                { 
+                "id": -1,
+                "type": -1,
+                "title": "Выпивать каждый день %%N%% стаканов воды",
+                "description": "Способствует нормальному функционированию всех систем и органов, улучшает пищеварение, кожное состояние и общее самочувствие.",
+                "time": 
+                {
+                    "creationTime": -1,
+                    "periodStart": -1, 
+                    "totalTime": -1,
+                    "timeEnd": -1,
+                    "type": "day",
+                    "months": 0,
+                    "weeks": 0,
+                    "days": 1,
+                    "hours": 0,
+                    "minutes": 0
+                },
+                "taskParam":
+                {
+                    "numFrom": 0,
+                    "numTo": -1,
+                    "unit": "стаканы"
+                },
+                "done": false,
+                "progress": 0,
+                "doneTime": -1,
+                "progressTimeLine": [],
+                "tagsId": ["Asl21Ks3la"],
+                "bonuses": 
+                {
+                    "xp": -1,
+                    "money": -1
+                }
+                },
+                { 
+                    "id": -1,
+                    "type": -1,
+                    "title": "Употребление фруктов и овощей",
+                    "description": "Пополнение организма витаминами, минералами и антиоксидантами, поддержание здорового веса и иммунитета, снижение риска развития сердечно-сосудистых заболеваний и рака",
+                    "time": 
+                    {
+                        "creationTime": -1,
+                        "periodStart": -1, 
+                        "totalTime": -1,
+                        "timeEnd": -1,
+                        "type": "day",
+                        "months": 0,
+                        "weeks": 0,
+                        "days": 1,
+                        "hours": 0,
+                        "minutes": 0
+                    },
+                    "taskParam":
+                    {
+                        "numFrom": 0,
+                        "numTo": -1,
+                        "unit": ""
+                    },
+                    "done": false,
+                    "progress": 0,
+                    "doneTime": -1,
+                    "progressTimeLine": [],
+                    "tagsId": ["Asl21Ks3la"],
+                    "bonuses": 
+                    {
+                        "xp": -1,
+                        "money": -1
+                    }
+                },
+                { 
+                "id": -1,
+                "type": -1,
+                "title": "Регулярный прием витаминов и добавок(раз в день)",
+                "description": "Обеспечивает организм необходимыми питательными веществами, укрепляет иммунитет и поддерживает здоровье кожи, волос и ногтей.",
+                "time": 
+                {
+                    "creationTime": -1,
+                    "periodStart": -1, 
+                    "totalTime": -1,
+                    "timeEnd": -1,
+                    "type": "day",
+                    "months": 0,
+                    "weeks": 0,
+                    "days": 1,
+                    "hours": 0,
+                    "minutes": 0
+                },
+                "taskParam":
+                {
+                    "numFrom": 0,
+                    "numTo": -1,
+                    "unit": ""
+                },
+                "done": false,
+                "progress": 0,
+                "doneTime": -1,
+                "progressTimeLine": [],
+                "tagsId": ["Asl21Ks3la"],
+                "bonuses": 
+                {
+                    "xp": -1,
+                    "money": -1
+                }
+                }
+            ]
+        ],
+        [
+            [
+                "Привычки для спорта",
+                ""
+            ],
+            {
+                "backgroundColor": "#104145",
+                "borderColor": "#2DC3D1"
+            },
+            [
+                { 
+                "id": -1,
+                "type": -1,
+                "title": "Занятия йогой или пилатесом",
+                "description": "Улучшает гибкость, силу и равновесие, снижает уровень стресса и улучшает психическое здоровье.",
+                "time": 
+                {
+                    "creationTime": -1,
+                    "periodStart": -1, 
+                    "totalTime": -1,
+                    "timeEnd": -1,
+                    "type": "week",
+                    "months": 0,
+                    "weeks": 1,
+                    "days": 0,
+                    "hours": 0,
+                    "minutes": 0
+                },
+                "taskParam":
+                {
+                    "numFrom": 0,
+                    "numTo": -1,
+                    "unit": ""
+                },
+                "done": false,
+                "progress": 0,
+                "doneTime": -1,
+                "progressTimeLine": [],
+                "tagsId": ["fmcp23AdSW"],
+                "bonuses": 
+                {
+                    "xp": -1,
+                    "money": -1
+                }
+                },
+                { 
+                    "id": -1,
+                    "type": -1,
+                    "title": "Регулярные занятия спортом",
+                    "description": "Улучшает общее физическое состояние, снижает риск сердечно-сосудистых заболеваний и ожирения, укрепляет иммунитет.",
+                    "time": 
+                    {
+                        "creationTime": -1,
+                        "periodStart": -1, 
+                        "totalTime": -1,
+                        "timeEnd": -1,
+                        "type": "week",
+                        "months": 0,
+                        "weeks": 1,
+                        "days": 2,
+                        "hours": 0,
+                        "minutes": 0
+                    },
+                    "taskParam":
+                    {
+                        "numFrom": 0,
+                        "numTo": -1,
+                        "unit": ""
+                    },
+                    "done": false,
+                    "progress": 0,
+                    "doneTime": -1,
+                    "progressTimeLine": [],
+                    "tagsId": ["fmcp23AdSW"],
+                    "bonuses": 
+                    {
+                        "xp": -1,
+                        "money": -1
+                    }
+                }
+            ]
+        ]
+
+    ]
+
+}
+  

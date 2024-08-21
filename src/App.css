@@ -1,0 +1,1372 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap");
+
+.blur {
+    filter: blur(20px);
+    cursor: pointer;
+}
+.startGame {
+    position: absolute;
+    z-index: 99;
+    font-size: 40px;
+    color: #f2eee9;
+    font-family: "Rubik Wet Paint";
+    text-align: center;
+    margin-top: 30%;
+    width: 100%;
+    pointer-events: none;
+}
+
+.expanded {
+    height: 400px !important;
+}
+.habitDone {
+    border-color: #71c752 !important;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background: none;
+    font: inherit;
+    outline: none;
+}
+
+/* Скрыть стрелки для изменения значений в Firefox */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Скрыть стрелки для изменения значений в Chrome, Safari, Edge */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    display: none;
+}
+
+button {
+    background-color: transparent;
+    color: inherit;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font: inherit;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    background-color: #16171b;
+}
+
+.mainMenu {
+    position: relative;
+    max-width: 300px;
+    min-width: 300px;
+    height: 100vh;
+    background-color: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainMenu nav {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.mainMenu img {
+    width: 135px;
+    height: 135px;
+}
+
+.menu__block {
+    display: flex;
+    column-gap: 30px;
+    align-items: flex-end;
+    cursor: pointer;
+}
+.menu__block:hover .menu__block-text {
+    fill: #f2eee9;
+    color: #f2eee9;
+}
+.menu__block:hover .menu__block-icon svg path {
+    fill: #f2eee9;
+    color: #f2eee9;
+}
+
+.menu__block-icon svg path {
+    transition: all 0.1s ease-in;
+    fill: #a7a49f;
+}
+
+.menu__block-icon svg {
+    height: 22px;
+    width: 22px;
+}
+
+.checkedMenu-text {
+    color: #f2eee9 !important;
+}
+
+.menu__block-text {
+    color: #a7a49f;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: 20px;
+    transition: all 0.1s ease-in;
+}
+
+/*  */
+.App {
+    display: flex;
+    flex-direction: row;
+}
+main {
+    width: calc(100% - 300px);
+    position: relative;
+}
+
+.section__addHabit {
+    position: fixed;
+    z-index: 100;
+
+    width: calc(90% - 300px);
+    height: 100px;
+
+    background-color: #1e1e1e;
+
+    bottom: 30px;
+    right: calc((10%) / 2);
+
+    border-radius: 30px;
+    box-shadow: 0px 2px 40px rgba(3, 3, 10, 1);
+
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+}
+
+.addHabit__form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 40px;
+    padding-right: 20px;
+    padding-left: 20px;
+    height: 100px;
+    transform-origin: left center;
+    width: 100%;
+}
+
+.form__inputHabit,
+.form__btnHabit,
+.form__btnMoreOptions svg {
+    height: 50px;
+}
+
+.form__inputHabit::placeholder,
+.form__inputHabit {
+    transition: all 0.1s ease-in;
+}
+.form__btnHabit:hover {
+    /* color: #F2EEE9; */
+    box-shadow: 0px 0px 20px rgba(247, 93, 100, 0.5);
+    background-color: rgba(247, 93, 105, 1);
+    font-weight: 700;
+}
+
+.form__inputHabit {
+    width: 70%;
+    height: 70px;
+
+    min-width: 350px;
+    color: #a7a49f;
+    font-size: 30px;
+    font-family: "Rubik", sans-serif;
+    padding-left: 15px;
+    border-radius: 20px;
+}
+
+.inptHbt-sm {
+    width: 30%;
+    min-width: 50px;
+    background-color: #16171b;
+}
+
+.inptHbt-sm::placeholder {
+    font-size: 20px;
+}
+
+input[type="date"] {
+    font-size: 20px;
+    width: auto !important;
+    color: #a7a49f;
+}
+input[type="time"] {
+    font-size: 20px;
+    width: auto !important;
+}
+
+.form__btnHabit {
+    width: 15%;
+    border-radius: 20px;
+    background-color: #f75d64;
+    color: #16171b;
+    font-size: 25px;
+    font-family: "Rubik", sans-serif;
+    height: 70px;
+    transition: all 0.1s ease-in;
+    font-weight: 600;
+    box-shadow: 0px 0px 20px rgba(247, 93, 100, 0.3);
+}
+
+.form__btnMoreOptions svg {
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(1, 0, 0.2, 1);
+}
+.form__btnMoreOptions:hover svg {
+    transform: rotate(300deg);
+}
+
+.addHabit__form label {
+    font-size: 30px;
+    font-family: "Rubik", sans-serif;
+    margin-left: 10px;
+    color: #a7a49f;
+    font-weight: 600;
+}
+
+.section__AllHabits {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 200px;
+    /* row-gap: 20px; */
+}
+
+.AllHabits__sortHabitsHeader {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    background-color: #1e1e1e;
+    padding-top: 10px;
+    border-radius: 20px;
+    box-shadow: 0px 6px 10px rgba(3, 3, 3, 0.259);
+    margin-bottom: 40px;
+}
+
+.sortHabitsHeader__title {
+    font-size: 50px;
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+    text-align: center;
+    color: #f2eee9;
+}
+
+.section__sortHabits__form {
+    /* height: 50px; */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    column-gap: 20px;
+}
+
+.AllHabitsTags__block {
+    display: flex;
+    flex-direction: column;
+    column-gap: 20px;
+    row-gap: 20px;
+    /* padding-top: 20px; */
+    justify-content: space-around;
+    flex-wrap: no-wrap;
+    padding-bottom: 20px;
+    padding-left: 60px;
+}
+
+.AllHabits__block {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    row-gap: 20px;
+    /* padding-top: 10px; */
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* padding-bottom: 10px; */
+}
+
+.block__habit {
+    height: auto;
+    width: auto;
+    max-width: 1200px;
+    min-width: 650px;
+    background-color: #1e1e1e;
+    border-radius: 20px;
+    column-gap: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 1px solid transparent;
+    margin-top: 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+.block__habit:hover {
+    border: 1px solid #a7a49f !important;
+}
+
+.hBlock__left {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.hBlock__left__timeLimit {
+    margin-top: -10px;
+    color: #a7a49f;
+    font-weight: 500;
+    font-family: "Rubik", sans-serif;
+}
+
+.hBlock__left__title {
+    width: 100%;
+    font-size: 30px;
+    color: #f2eee9;
+    font-weight: 600;
+    font-family: "Rubik", sans-serif;
+}
+
+.hBlock__left__progress {
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+    color: #f2eee9;
+    font-size: 18px;
+}
+
+.hBlock__right {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.form__hBlock {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    align-items: center;
+}
+
+.form__hBlock__inpt {
+    background-color: #16171b;
+    height: 40px;
+    border-radius: 10px;
+    padding-left: 10px;
+    max-width: 150px;
+    font-family: "Rubik", sans-serif;
+    color: #f2eee9;
+}
+
+.form__btnAddNum {
+    background-color: #f75d64;
+    box-shadow: 0px 0px 10px rgba(255, 116, 116, 0.259);
+    text-align: center;
+    position: relative;
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+}
+
+.form__btnDone {
+    background-color: #71c752;
+    box-shadow: 0px 0px 10px rgba(61, 250, 51, 0.29);
+    text-align: center;
+    position: relative;
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    justify-content: space-around;
+    font-family: "Rubik", sans-serif;
+    color: #16171b;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.form__btnMinusNum {
+    background-color: #877df5;
+    box-shadow: 0px 0px 10px rgba(124, 145, 250, 0.3);
+    text-align: center;
+    position: relative;
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    padding-top: 14px;
+}
+
+.form__btnMinusNum svg {
+    position: relative;
+}
+
+.form__btnMinusNum,
+.form__btnAddNum,
+.form__btnDone {
+    cursor: pointer;
+}
+
+/* tags */
+
+/* Общие стили для всех полос прокрутки */
+/* Убираем стандартные полосы прокрутки */
+::-webkit-scrollbar {
+    width: 1px; /* Ширина полосы прокрутки */
+    height: 5px;
+}
+
+/* Оформление полосы прокрутки */
+::-webkit-scrollbar-track {
+    background-color: transparent; /* Цвет фона полосы прокрутки */
+}
+
+/* Оформление бегунка (ползунка) */
+::-webkit-scrollbar-thumb {
+    background-color: #16171b; /* Цвет бегунка */
+    border-radius: 5px; /* Скругление углов бегунка */
+}
+
+/* Изменение внешнего вида бегунка при наведении на него курсора */
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(30, 30, 30); /* Цвет бегунка при наведении */
+}
+.form__allTags {
+    display: flex;
+    overflow-x: auto; /* Добавляем горизонтальную прокрутку */
+    padding-bottom: 10px;
+    column-gap: 20px;
+    padding-left: 5px;
+    padding-right: 10px;
+}
+
+.form__tagBlock {
+    cursor: pointer;
+
+    flex: 0 0 auto; /* Отключаем сжатие */
+    width: 300px;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 30px;
+    column-gap: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 3px solid #f75d64;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    white-space: nowrap; /* Запрещаем перенос текста */
+    transform-origin: left top;
+}
+
+.tagBlock__title {
+    color: #f75d64;
+    font-family: "Rubik", sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    height: auto;
+    width: 80%;
+    position: relative;
+}
+
+.tagBlock__counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-family: "Rubik", sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    color: #f2eee9;
+    background-color: #f75d64;
+}
+
+/*  */
+/* Добавляем стили для кнопки */
+.button__edit-delete {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+/* Стили для выбранных блоков */
+.block__habit.selected {
+    border: 2px solid #007bff;
+}
+
+/* Стили для блока в режиме редактирования */
+.block__habit.selectable {
+    cursor: pointer;
+    border: 1px solid #007bff;
+}
+
+/* Стили для текста кнопки в режиме редактирования */
+.button__edit-delete.edit-mode {
+    background-color: #dc3545;
+}
+
+/* готовые привычки  */
+
+.HabitLibrary {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 20px;
+    row-gap: 40px;
+}
+
+.HabitLibrary__Title {
+    width: 100%;
+    text-align: center;
+    color: #f2eee9;
+    font-size: 50px;
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+}
+
+.HabitLibrary__Category {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 20px;
+    row-gap: 20px;
+}
+
+.HabitLibrary__CategoryTitle {
+    width: 100%;
+    text-align: left;
+    color: #f2eee9;
+    font-size: 25px;
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    padding-left: 20px;
+}
+
+.HabitLibrary__CategoryList {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.HabitLibrary__HabitContainer {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fill,
+        minmax(260px, 1fr)
+    ); /* Создаем автоматический grid с колонками шириной не менее 200px */
+    grid-column-gap: 20px;
+    grid-row-gap: 40px;
+
+    justify-content: space-between;
+}
+
+.HabitLibrary__Habit {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    width: 260px;
+    height: 350px;
+    border-radius: 20px;
+    border: 4px solid #71c752;
+    background-color: #2e5739;
+    padding-top: 20px;
+    row-gap: 10px;
+    padding-bottom: 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+.HabitLibrary__Habit:hover {
+    transform: scale(1.015);
+    box-shadow: 0px 0px 15px rgba(251, 252, 255, 0.2);
+}
+
+.HabitLibrary__HabitDetails {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    height: 80%;
+    width: 90%;
+    padding-bottom: 20px;
+}
+
+.HabitLibrary__HabitName {
+    font-size: 15px;
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    color: #f2eee9;
+    text-align: center;
+}
+
+.HabitLibrary__HabitName a {
+    text-decoration: underline;
+    transition: all 0.2s ease-in-out;
+}
+.HabitLibrary__HabitName a:hover {
+    text-decoration: underline;
+    color: #f75d64;
+}
+
+.HabitLibrary__HabitDescription {
+    font-size: 13px;
+    font-family: "Rubik", sans-serif;
+    font-weight: 200;
+    color: #f2eee9;
+    text-align: center;
+    border-right: 2px solid #71c752;
+    border-left: 2px solid #71c752;
+    font-style: italic;
+    height: fit-content;
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.HabitLibrary__HabitInput {
+    background-color: #1e1e1e;
+    width: 100%;
+    height: 35px;
+    font-size: 15px;
+    padding-left: 10px;
+    border-radius: 10px;
+    color: #f2eee9;
+    /* margin-bottom: -10px; */
+}
+
+.HabitLibrary__HabitNoneInput {
+    width: 100%;
+    height: 35px;
+}
+
+.HabitLibrary__HabitButton {
+    width: 90%;
+    height: 40px;
+    background-color: #f75d64;
+    border-radius: 10px;
+    color: #16171b;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* CompetitionPage */
+.CompetitionPage {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.CompPg__mainContent {
+    width: calc(100% - 330px);
+    height: fit-content;
+    min-width: 650px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    row-gap: 60px;
+}
+
+.CompPg__dataInfo {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fill,
+        minmax(350px, 1fr)
+    ); /* Создаем автоматический grid с колонками шириной не менее 200px */
+    /* grid-column-gap: 10px; */
+    grid-row-gap: 40px;
+    justify-items: center;
+    /* justify-content: space-between; */
+}
+
+.CompPg__dataInfo__block {
+    width: 350px;
+    height: 150px;
+    background-color: #1e1e1e;
+    border-radius: 20px;
+    display: flex;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.CompPg__habits {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    row-gap: 60px;
+}
+
+.CompPg__habits__title {
+    font-family: "Rubik Wet Paint";
+    font-size: 40px;
+    color: #f2eee9;
+    width: 100%;
+    text-align: center;
+}
+
+.lvlBlock__infoLvl {
+    padding-top: 15px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.infoLvl__title {
+    font-size: 25px;
+    font-family: "Rubik Wet Paint";
+    text-align: left;
+    color: #f2eee9;
+}
+
+.infoLvl__buttons {
+    /* padding-right: 20px; */
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+}
+.infoLvl__buttons__addBtn {
+    width: 120px;
+    height: 40px;
+    background-color: #f75d64;
+    font-family: "Rubik";
+    font-size: 15px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.infoLvl__buttons__passBtn {
+    width: 120px;
+    height: 40px;
+    background-color: #4e4e4e;
+    font-family: "Rubik";
+    font-size: 15px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.lvlBlock__allHabits {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-row-gap: 40px;
+    justify-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 30px;
+}
+
+.lvlBlock__allHabits__habit {
+    width: 320px;
+    background-color: #202020;
+    height: auto;
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid #5d5d5d;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.lvlBlock__allHabits__habit__title {
+    color: #f2eee9;
+    font-family: "Rubik";
+    font-size: 20px;
+}
+
+.lvlBlock__allHabits__habit__text {
+    color: #cecece;
+    font-family: "Rubik";
+    font-size: 15px;
+}
+
+.lvlBlock__dopInfo {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 15px;
+}
+
+.lvlBlock__dopInfo__xp {
+    font-size: 15px;
+    font-family: "Rubik Wet Paint";
+    color: #32ff20;
+    width: 100%;
+}
+.lvlBlock__dopInfo__coin {
+    font-size: 15px;
+    font-family: "Rubik Moonrocks";
+    text-align: center;
+    width: 100%;
+    color: #edff20;
+}
+
+.habits__lvlBlock {
+    border-top: 2px solid #f2eee9;
+    /* padding-bottom: 30px; */
+}
+
+.dataInfo__block__title {
+    width: 100%;
+    text-align: left;
+    color: #f2eee9;
+    font-family: "Rubik Wet Paint", system-ui;
+    font-size: 30px;
+}
+
+.dataInfo__block__text {
+    color: #f2eee9;
+    font-family: "Rubik Bubbles", system-ui;
+    font-size: 50px;
+}
+
+.CompPg__rightContent {
+    width: 330px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 70px;
+    background-color: #1e1e1e;
+    border-radius: 30px;
+    padding-bottom: 20px;
+    row-gap: 20px;
+}
+
+.rightContent__person {
+    height: 225px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    row-gap: 20px;
+}
+
+.person_ava {
+    width: 170px;
+    height: 170px;
+    background-color: #a7a49f;
+    border-radius: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.person_name {
+    font-size: 25px;
+    color: #f2eee9;
+    font-weight: 600;
+    font-family: "Rubik", sans-serif;
+}
+
+.rightContent__block {
+    background-color: #16171b;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    /* column-gap: 10px; */
+    row-gap: 20px;
+}
+
+.health__title {
+    font-family: "Rubik Wet Paint", system-ui;
+    font-size: 25px;
+    color: #32ff20;
+}
+
+.health__progressBar {
+    display: flex;
+    flex-direction: row;
+    height: 20px;
+    text-align: center;
+    column-gap: 10px;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.health__progressBar__minNum,
+.health__progressBar__maxNum {
+    font-family: "Rubik Wet Paint", system-ui;
+    font-size: 12px;
+    color: #f2eee9;
+}
+
+.health__progressBar__all {
+    width: 100%;
+    background-color: #1e1e1e;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.health__progressBar__part {
+    width: 10%;
+    background-color: #32ff20;
+    font-family: "Rubik Wet Paint", system-ui;
+    font-size: 10px;
+    height: 100%;
+    text-align: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border-radius: 20px; */
+}
+
+.coin__title {
+    font-family: "Rubik Wet Paint", system-ui;
+    font-size: 25px;
+    color: #edff20;
+}
+.coin__num {
+    width: 100%;
+    align-items: center;
+    text-align: right;
+    font-size: 30px;
+    font-family: "Rubik Moonrocks", sans-serif;
+    color: #f2eee9;
+}
+
+.coin__link {
+    color: #46517d;
+    font-size: 12px;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+    font-weight: 600;
+}
+
+.rightContent__block__about {
+    background-color: #0d101a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.aboutPers__text {
+    color: #333e62;
+    font-family: "Rubik", system-ui;
+    font-size: 13px;
+}
+
+.chart__today {
+    width: 40%;
+    overflow-x: scroll;
+    height: auto;
+}
+
+.product {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+    display: inline-block;
+}
+
+@media (max-width: 600px) {
+    .product {
+        width: 90%;
+    }
+}
+
+.background {
+    width: 430px;
+    height: 520px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+
+.background .shape {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.shape:first-child {
+    background: linear-gradient(#1845ad, #23a2f6);
+    left: -80px;
+    top: -80px;
+}
+
+.shape:last-child {
+    background: linear-gradient(to right, #ff512f, #f09819);
+    right: -30px;
+    bottom: -80px;
+}
+
+.login-form {
+    height: 520px;
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.13);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+    padding: 50px 35px;
+}
+
+.login-form * {
+    font-family: "Poppins", sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+
+.login-form h3 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+}
+
+.login-form label {
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.login-form input {
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.login-form ::placeholder {
+    color: #e5e5e5;
+}
+
+.login-form button {
+    margin-top: 25px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dopLink {
+    color: #0d101a;
+    margin-top: 10px;
+}
+
+.errorMessage {
+    color: #ff1500;
+    height: 20px;
+    font-weight: 600;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+/* profie */
+.profilePage {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.ProfileBlock {
+    height: auto;
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.067);
+    position: absolute;
+    transform: translate(-50%, 0);
+    top: 50px;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+    padding: 50px 35px;
+    font-family: "Poppins", sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+.ProfileBlock__logo {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 20px;
+}
+.ProfileBlock__logo .logo {
+    width: 120px;
+    height: 120px;
+    background-color: #0d101a;
+    border-radius: 50px;
+}
+
+.ProfileBlock__username {
+    font-family: "Rubik";
+    font-size: 50px;
+    font-weight: 600;
+}
+.ProfileBlock__exit {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 15px;
+    font-family: "Rubik";
+    color: #9497a2;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.ProfileBlock__exit:hover {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 15px;
+    font-family: "Rubik";
+    color: #d1d3da;
+}
+
+.friendsBlock {
+    margin-top: 50px;
+}
+
+.friends-block {
+    padding: 20px;
+}
+
+
+
+.radio-container {
+    margin-bottom: 10px;
+  }
+  
+  .radio-input {
+    display: none; /* Скрытие стандартной радио кнопки */
+  }
+  
+  .radio-label {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .radio-label:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .radio-input:checked + .radio-label {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+  }
+  
+  .radio-input:checked + .radio-label:hover {
+    background-color: #0056b3;
+  }
+  
+.friends-list {
+    margin-bottom: 10px;
+}
+
+.friend-link {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.search-container {
+    margin-bottom: 10px;
+}
+
+.search-input {
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.search-button {
+    padding: 5px 10px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.no-friends-message {
+    margin-top: 10px;
+}
+
+.found-friend-message {
+    margin-top: 10px;
+}
+
+.page-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.input-container {
+    margin-bottom: 20px;
+}
+
+.habits-container {
+    margin-bottom: 20px;
+}
+
+.selected-habits-container {
+    margin-bottom: 20px;
+}
+
+.friend-selection-container {
+    margin-bottom: 20px;
+}
+
+.invited-friends-container {
+    margin-bottom: 20px;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}

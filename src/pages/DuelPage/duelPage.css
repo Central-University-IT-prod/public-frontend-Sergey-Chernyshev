@@ -1,0 +1,84 @@
+
+.habitBlock {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .habitBlock p {
+    margin-bottom: 10px;
+  }
+  
+  .creatorInfo,
+  .friendInfo {
+    margin-bottom: 15px;
+  }
+  
+  .habitInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .habitInfo > div {
+    padding: 8px 15px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    margin-right: 8px;
+    cursor: pointer;
+  }
+  
+  .habitInfo > div:hover {
+    background-color: #555;
+  }
+  
+  .creatorInfo p,
+  .friendInfo p {
+    font-weight: bold;
+  }
+  
+  .creatorInfo {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .friendInfo {
+    opacity: 0.7;
+  }
+  
+  .friendInfo p {
+    text-decoration: line-through;
+  }
+  
+.competitionOnWaitinf{
+  color: #fff;
+}
+
+.competitionOnWaitinf{
+  margin-top: 50px;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.habitBlock{
+  margin-top: 40px;
+}
+
+
+.page-container{
+  color: #fff;
+}
+.dualeInp{
+  border-bottom: 2px solid #fff;
+  margin-left: 10px;
+  position: relative;
+  color: #fff;
+
+}

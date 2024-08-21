@@ -1,0 +1,141 @@
+{
+    "libraryLvls": 
+    [
+        {
+            "lvlTitle": "Уровень 1 - начнем с недели полезной еды",
+            "started": false,
+            "ended": false,
+            "awards": 
+                {
+                    "xp": 100,
+                    "coin": 30
+                },
+            "habits":
+                [
+                    { 
+                        "id": -1,
+                        "type": "week",
+                        "title": "Каждую неделю тебе предстоит делать по четыре овощных салата",
+                        "titleHtml": "Каждую неделю тебе предстоит делать по четыре овощных салата",
+                        "description": "Греческий салат: Помидоры, нарезанные кубиками. Огурцы, нарезанные кубиками. Красный лук, нарезанный тонкими полукольцами. Маслины. Кубики феты. Свежая зелень (укроп, петрушка или базилик). Оливковое масло для заправки",
+                        "time": 
+                        {
+                            "creationTime": -1,
+                            "periodStart": -1, 
+                            "totalTime": -1,
+                            "timeEnd": -1,
+                            "type": "week",
+                            "months": 0,
+                            "weeks": 1,
+                            "days": 0,
+                            "hours": 0,
+                            "minutes": 0
+                        },
+                        "taskParam":
+                        {
+                            "numFrom": 0,
+                            "numTo": 3,
+                            "unit": ""
+                        },
+                        "done": false,
+                        "progress": 0,
+                        "doneTime": -1,
+                        "progressTimeLine": [],
+                        "tagsId": ["1111111111", "Asl21Ks3la", "3a1msK23ma"],
+                        "bonuses": 
+                        {
+                            "xp": 100,
+                            "money": 100
+                        }
+                        }
+                ]
+        },
+        {
+            "lvlTitle": "Уровень 2 - почему бы не заняться самообразованием",
+            "started": false,
+            "ended": false,
+            "awards": 
+                {
+                    "xp": 100,
+                    "coin": 40
+                },
+            "habits":
+                [
+                    { 
+                        "id": -1,
+                        "type": "week",
+                        "title": "Начни с малого: читай по 20 страниц в день",
+                        "titleHtml": "Начни с малого: читай по 20 страниц в день",
+                        "description": "Чтение по 20 страниц в день позволяет читать от 7300 страниц в год. Это примерно 24 книги, которые позволят вам расширить свой кругозор",
+                        "time": 
+                        {
+                            "creationTime": -1,
+                            "periodStart": -1, 
+                            "totalTime": -1,
+                            "timeEnd": -1,
+                            "type": "day",
+                            "months": 0,
+                            "weeks": 0,
+                            "days": 1,
+                            "hours": 0,
+                            "minutes": 0
+                        },
+                        "taskParam":
+                        {
+                            "numFrom": 0,
+                            "numTo": 20,
+                            "unit": ""
+                        },
+                        "done": false,
+                        "progress": 0,
+                        "doneTime": -1,
+                        "progressTimeLine": [],
+                        "tagsId": ["1111111111", "fmDp21AdSW"],
+                        "bonuses": 
+                        {
+                            "xp": 20,
+                            "money": 10
+                        }
+                    },
+                    { 
+                        "id": -1,
+                        "type": "week",
+                        "title": "Прочитай статью про планирование своего времени",
+                        "titleHtml": "Прочитай статью про планирование своего времени",
+                        "description": "Планирование помогает вам двигаться к своим целям, определяя конкретные шаги, которые нужно предпринять для их достижения. Это позволяет вам оставаться на пути к успеху и реализовывать свой потенциал",
+                        "time": 
+                        {
+                            "creationTime": -1,
+                            "periodStart": -1, 
+                            "totalTime": -1,
+                            "timeEnd": -1,
+                            "type": "week",
+                            "months": 0,
+                            "weeks": 1,
+                            "days": 0,
+                            "hours": 0,
+                            "minutes": 0
+                        },
+                        "taskParam":
+                        {
+                            "numFrom": 0,
+                            "numTo": -1,
+                            "unit": ""
+                        },
+                        "done": false,
+                        "progress": 0,
+                        "doneTime": -1,
+                        "progressTimeLine": [],
+                        "tagsId": ["1111111111", "fmDp21AdSW"],
+                        "bonuses": 
+                        {
+                            "xp": 90,
+                            "money": 30
+                        }
+                    }
+                ]
+        }
+    ]
+
+}
+  
